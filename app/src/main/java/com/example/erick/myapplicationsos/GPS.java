@@ -209,6 +209,7 @@ public class GPS extends ActionBarActivity implements LocationListener{
     }
 
 
+
     public void enviarSolicitacao() {
 
         if(chave.equalsIgnoreCase("socorro")){
