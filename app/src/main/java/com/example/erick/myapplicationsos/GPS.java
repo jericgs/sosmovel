@@ -35,7 +35,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class GPS extends ActionBarActivity implements LocationListener{
 
     private SupportMapFragment mapFrag;
