@@ -176,7 +176,6 @@ public class GPS extends ActionBarActivity implements LocationListener{
             Log.i("Informação", e.getMessage());
             ToastManager.show(this, "Sem conexão!", ToastManager.INFORMACOES);
             finish();
-
         }
 
     }
@@ -207,8 +206,6 @@ public class GPS extends ActionBarActivity implements LocationListener{
     public void onProviderDisabled(String provider) {
 
     }
-
-
 
     public void enviarSolicitacao() {
 
