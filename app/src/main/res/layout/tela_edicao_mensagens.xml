@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/branco_FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edicao_titulo"
+                android:background="@android:color/background_dark"
+                android:textColor="@android:color/background_light"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/tp_activity_horizontal_margin"
+                android:paddingRight="@dimen/tp_activity_horizontal_margin"
+                android:paddingTop="@dimen/tp_activity_vertical_margin"
+                android:paddingBottom="@dimen/tp_activity_vertical_margin"
+                android:id="@+id/textViewLabel1Edicao" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label1_Edicao"
+                    android:id="@+id/textViewMensagem1" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:textColorHint="@color/cinza_808184"
+                    android:hint="Nova mensagem"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:ems="11"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextMensagem1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextMensagem2"
+                    android:layout_above="@+id/editTextMensagem2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label2_Edicao"
+                    android:id="@+id/textViewMensagem2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/preto_000000"
+                    android:textColorHint="@color/cinza_808184"
+                    android:hint="Nova mensagem"
+                    android:background="@drawable/customizado_edittext"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextMensagem2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextMensagem3"
+                    android:layout_above="@+id/editTextMensagem3"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label3_Edicao"
+                    android:id="@+id/textViewMensagem3" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:textColorHint="@color/cinza_808184"
+                    android:hint="Nova mensagem"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextMensagem3"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/buttonSalvar"
+                    android:layout_above="@+id/buttonSalvar"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/textoBtSalvar"
+            android:id="@+id/buttonSalvar"
+            android:textColor="@color/branco_FFFFFF"
+            android:background="@drawable/customizado_button"
+            android:layout_marginBottom="80dp"
+            android:layout_margin="@dimen/tc_margem"
+            android:nextFocusRight="@+id/buttonCancelar"
+            android:layout_above="@+id/buttonCancelar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_alignEnd="@+id/editText2" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/textoBtCancelar"
+            android:id="@+id/buttonCancelar"
+            android:textColor="@color/branco_FFFFFF"
+            android:background="@drawable/customizado_button"
+            android:layout_marginBottom="80dp"
+            android:layout_margin="@dimen/tc_margem"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_alignEnd="@+id/editText2" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vermelho_8D000C">#8D000C</color>
+    <color name="vermelho_FE0000">#FE0000</color>
+    <color name="cinza_808184">#808184</color>
+    <color name="cinza_BBBDBF">#BBBDBF</color>
+    <color name="branco_FFFFFF">#FFFFFF</color>
+    <color name="preto_000000">#000000</color>
+
+</resources>

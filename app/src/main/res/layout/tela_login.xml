@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/vermelho_8D000C"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_logo"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textColorHint="@color/cinza_808184"
+            android:hint="@string/hint_numero"
+            android:ems="11"
+            android:maxLength="10"
+            android:background="@drawable/customizado_edittext"
+            android:id="@+id/editTextNumero"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:layout_marginBottom="100dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/customizado_button_login"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/textoBtEntra"
+                android:id="@+id/btEntra" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/customizado_button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/textoBtCadastra"
+                android:id="@+id/btCadastro" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

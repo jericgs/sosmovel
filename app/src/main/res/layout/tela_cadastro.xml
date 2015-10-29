@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/branco_FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/scrollView" >
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label1_usuario"
+                android:background="@android:color/background_dark"
+                android:textColor="@android:color/background_light"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/tp_activity_horizontal_margin"
+                android:paddingRight="@dimen/tp_activity_horizontal_margin"
+                android:paddingTop="@dimen/tp_activity_vertical_margin"
+                android:paddingBottom="@dimen/tp_activity_vertical_margin"
+                android:id="@+id/textViewUsuario" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label2_nomeUsuario"
+                    android:id="@+id/textViewNomeUsuario" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:ems="11"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNomeUsuario"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNumeroUsuario"
+                    android:layout_above="@+id/editTextNumeroUsuario"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label3_numeroUsuario"
+                    android:id="@+id/textViewNumero" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:textColorHint="@android:color/background_light"
+                    android:ems="11"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNumeroUsuario"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextDoencasUsuario"
+                    android:layout_above="@+id/editTextDoencasUsuario"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label4_doençasUsuario"
+                    android:id="@+id/textViewDoencasUsuario" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextDoencasUsuario"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNomeFamiliar1"
+                    android:layout_above="@+id/editTextNomeFamiliar1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label5_cadastroFamiliares1"
+                android:background="@android:color/background_dark"
+                android:textColor="@android:color/background_light"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/tp_activity_horizontal_margin"
+                android:paddingRight="@dimen/tp_activity_horizontal_margin"
+                android:paddingTop="@dimen/tp_activity_vertical_margin"
+                android:paddingBottom="@dimen/tp_activity_vertical_margin"
+                android:id="@+id/textViewCadastroFamiliares1" />
+
+            <LinearLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label6_nomeFamiliar"
+                    android:id="@+id/textViewNomeFamiliar1" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNomeFamiliar1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNumeroFamiliar1"
+                    android:layout_above="@+id/editTextNumeroFamiliar1" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label7_numeroFamiliar"
+                    android:id="@+id/textViewNumeroFamiliar1" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNumeroFamiliar1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextParentescoFamiliar1"
+                    android:layout_above="@+id/editTextParentescoFamiliar1"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label8_parentescoFamiliar"
+                    android:id="@+id/textViewParentescoFamiliar1" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextParentescoFamiliar1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNomeFamiliar2"
+                    android:layout_above="@+id/editTextNomeFamiliar2"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label5_cadastroFamiliares2"
+                android:background="@android:color/background_dark"
+                android:textColor="@android:color/background_light"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/tp_activity_horizontal_margin"
+                android:paddingRight="@dimen/tp_activity_horizontal_margin"
+                android:paddingTop="@dimen/tp_activity_vertical_margin"
+                android:paddingBottom="@dimen/tp_activity_vertical_margin"
+                android:id="@+id/textViewCadastroFamiliares2"/>
+
+            <LinearLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label6_nomeFamiliar"
+                    android:id="@+id/textViewNomeFamiliar2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNomeFamiliar2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNumeroFamiliar2"
+                    android:layout_above="@+id/editTextNumeroFamiliar2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label7_numeroFamiliar"
+                    android:id="@+id/textViewNumeroFamiliar2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNumeroFamiliar2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextParentescoFamiliar2"
+                    android:layout_above="@+id/editTextParentescoFamiliar2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label8_parentescoFamiliar"
+                    android:id="@+id/textViewParentescoFamiliar2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextParentescoFamiliar2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNomeFamiliar3"
+                    android:layout_above="@+id/editTextNomeFamiliar3"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label5_cadastroFamiliares3"
+                android:background="@android:color/background_dark"
+                android:textColor="@android:color/background_light"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/tp_activity_horizontal_margin"
+                android:paddingRight="@dimen/tp_activity_horizontal_margin"
+                android:paddingTop="@dimen/tp_activity_vertical_margin"
+                android:paddingBottom="@dimen/tp_activity_vertical_margin"
+                android:id="@+id/textViewCadastroFamiliares3" />
+
+            <LinearLayout
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label6_nomeFamiliar"
+                    android:id="@+id/textViewNomeFamiliar3" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNomeFamiliar3"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextNumeroFamiliar3"
+                    android:layout_above="@+id/editTextNumeroFamiliar3"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label7_numeroFamiliar"
+                    android:id="@+id/textViewNumeroFamiliar3" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextNumeroFamiliar3"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/editTextParentescoFamiliar3"
+                    android:layout_above="@+id/editTextParentescoFamiliar3" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="15dp"
+                    android:paddingLeft="@dimen/textView_margem"
+                    android:paddingTop="@dimen/textView_margem"
+                    android:textStyle="bold"
+                    android:text="@string/label8_parentescoFamiliar"
+                    android:id="@+id/textViewParentescoFamiliar3" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto_000000"
+                    android:background="@drawable/customizado_edittext"
+                    android:singleLine="true"
+                    android:ems="11"
+                    android:maxLength="50"
+                    android:layout_margin="@dimen/tc_margem"
+                    android:id="@+id/editTextParentescoFamiliar3"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="true"
+                    android:nextFocusRight="@+id/buttonCadastro"
+                    android:layout_above="@+id/buttonCadastro" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/botao_cadastra"
+            android:id="@+id/buttonCadastro"
+            android:textColor="@color/branco_FFFFFF"
+            android:background="@drawable/customizado_button"
+            android:layout_marginBottom="80dp"
+            android:layout_margin="@dimen/tc_margem"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_alignEnd="@+id/editText2" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">" "S.O.S - Móvel</string>
+
+    //Menu
+    <string name="item1">Editar mensagens</string>
+
+    //Tela de solicitação de socorro
+    <string name="titulo">Mapa</string>
+    <string name="sub_titulo">Informações</string>
+
+    //Tela Cadastro
+    <string name="label1_usuario">Usuário</string>
+    <string name="label2_nomeUsuario">Nome:</string>
+    <string name="label3_numeroUsuario">Número:</string>
+    <string name="label4_doençasUsuario">Doenças Hereditárias:</string>
+    <string name="label5_cadastroFamiliares1">Familiar 1</string>
+    <string name="label5_cadastroFamiliares2">Familiar 2</string>
+    <string name="label5_cadastroFamiliares3">Familiar 3</string>
+    <string name="label6_nomeFamiliar">Nome:</string>
+    <string name="label7_numeroFamiliar">Número:</string>
+    <string name="label8_parentescoFamiliar">Parentesco:</string>
+    <string name="botao_cadastra">CADASTRA</string>
+
+    //Tela Login
+    <string name="hint_numero">Ex: 8496369155</string>
+    <string name="textoBtEntra">ENTRA</string>
+    <string name="textoBtCadastra">CADASTRA-SE</string>
+
+    //Tela Edição de Mensagens
+    <string name="edicao_titulo">Edição:</string>
+    <string name="label1_Edicao">Mensagem 1</string>
+    <string name="label2_Edicao">Mensagem 2</string>
+    <string name="label3_Edicao">Mensagem 3</string>
+    <string name="textoBtSalvar">Salvar</string>
+    <string name="textoBtCancelar">Cancelar</string>
+
+    //Alerta
+    <string name="botao_Ok">Ok</string>
+
+</resources>
