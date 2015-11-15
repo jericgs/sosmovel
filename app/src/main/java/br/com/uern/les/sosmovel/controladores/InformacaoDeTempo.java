@@ -1,4 +1,4 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.controladores;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

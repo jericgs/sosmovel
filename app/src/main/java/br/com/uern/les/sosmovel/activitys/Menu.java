@@ -1,4 +1,4 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.activitys;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
@@ -11,13 +11,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import java.util.ArrayList;
+
+import br.com.uern.les.sosmovel.R;
+import br.com.uern.les.sosmovel.controladores.SMS;
+import br.com.uern.les.sosmovel.controladores.ToastManager;
+import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
+import br.com.uern.les.sosmovel.controladores.DBAdapter;
 
 public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener{
 
@@ -199,7 +204,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
 
         if(v.getId() == R.id.imageButtonSocorro){
 
-            Intent localizacao = new Intent(this, GPS.class);
+            Intent localizacao = new Intent(this, Solicitacao.class);
             localizacao.putExtra("chave", "socorro");
             startActivity(localizacao);
             finish();

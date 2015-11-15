@@ -1,4 +1,4 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.controladores;
 
 import android.util.Log;
 import org.apache.http.HttpResponse;

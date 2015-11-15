@@ -1,8 +1,7 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.activitys;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -11,6 +10,11 @@ import android.text.SpannableString;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import br.com.uern.les.sosmovel.controladores.DBAdapter;
+import br.com.uern.les.sosmovel.R;
+import br.com.uern.les.sosmovel.controladores.ToastManager;
+import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
 
 
 /**

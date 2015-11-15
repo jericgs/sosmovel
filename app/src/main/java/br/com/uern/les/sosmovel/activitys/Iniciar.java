@@ -1,9 +1,10 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.activitys;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import br.com.uern.les.sosmovel.controladores.DBAdapter;
 
 /**
  * Created by Erick on 22/07/2015.
@@ -27,6 +28,7 @@ public class Iniciar extends Activity {
             telaMenu.putExtra("chave", "Iniciar");
             startActivity(telaMenu);
             finish();
+
         }else{
             Intent telaLogin = new Intent(this, Login.class);
             startActivity(telaLogin);

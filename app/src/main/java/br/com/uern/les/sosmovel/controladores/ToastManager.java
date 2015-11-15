@@ -1,4 +1,4 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.controladores;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import br.com.uern.les.sosmovel.R;
 
 /**
  * Created by Erick on 14/01/2015.

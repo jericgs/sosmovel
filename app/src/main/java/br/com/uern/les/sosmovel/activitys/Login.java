@@ -1,9 +1,8 @@
-package com.example.erick.myapplicationsos;
+package br.com.uern.les.sosmovel.activitys;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -13,6 +12,11 @@ import android.widget.EditText;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
+
+import br.com.uern.les.sosmovel.R;
+import br.com.uern.les.sosmovel.controladores.ToastManager;
+import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
+import br.com.uern.les.sosmovel.controladores.DBAdapter;
 
 /**
  * Created by Erick on 23/07/2015.
