@@ -14,6 +14,7 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
+import br.com.uern.les.sosmovel.controladores.Mascara;
 import br.com.uern.les.sosmovel.controladores.ToastManager;
 import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;
@@ -40,6 +41,7 @@ public class Login extends Activity implements View.OnClickListener{
         }
 
         editTextNumero = (EditText)findViewById(R.id.editTextNumero);
+        editTextNumero.addTextChangedListener(Mascara.insert("(##)####-####", editTextNumero));
 
         btEntra = (Button)findViewById(R.id.btEntra);
         btEntra.setOnClickListener(this);
@@ -67,7 +69,7 @@ public class Login extends Activity implements View.OnClickListener{
                 pd.show();
 
                 ArrayList<NameValuePair> parametrosPostLonginUsuario = new ArrayList<NameValuePair>();
-                parametrosPostLonginUsuario.add(new BasicNameValuePair("idUsuario", editTextNumero.getText().toString()));
+                parametrosPostLonginUsuario.add(new BasicNameValuePair("idUsuario", Mascara.unmask(editTextNumero.getText().toString())));
 
                 try{
 

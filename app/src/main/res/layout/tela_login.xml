@@ -31,7 +31,7 @@
             android:textColorHint="@color/cinza_808184"
             android:hint="@string/hint_numero"
             android:ems="11"
-            android:maxLength="10"
+            android:maxLength="13"
             android:background="@drawable/customizado_edittext"
             android:id="@+id/editTextNumero"
             android:layout_centerVertical="true"

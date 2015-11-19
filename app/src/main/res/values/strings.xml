@@ -12,19 +12,19 @@
 
     //Tela Cadastro
     <string name="label1_usuario">Usuário</string>
-    <string name="label2_nomeUsuario">Nome:</string>
+    <string name="label2_nomeUsuario">Nome completo:</string>
     <string name="label3_numeroUsuario">Número:</string>
     <string name="label4_doençasUsuario">Doenças Hereditárias:</string>
     <string name="label5_cadastroFamiliares1">Familiar 1</string>
     <string name="label5_cadastroFamiliares2">Familiar 2</string>
     <string name="label5_cadastroFamiliares3">Familiar 3</string>
-    <string name="label6_nomeFamiliar">Nome:</string>
+    <string name="label6_nomeFamiliar">Nome completo:</string>
     <string name="label7_numeroFamiliar">Número:</string>
     <string name="label8_parentescoFamiliar">Parentesco:</string>
     <string name="botao_cadastra">CADASTRA</string>
 
     //Tela Login
-    <string name="hint_numero">Ex: 8496369155</string>
+    <string name="hint_numero">Ex: (84)99636-9155</string>
     <string name="textoBtEntra">ENTRA</string>
     <string name="textoBtCadastra">CADASTRA-SE</string>
 

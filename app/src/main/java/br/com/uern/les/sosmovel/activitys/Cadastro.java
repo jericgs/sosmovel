@@ -22,6 +22,7 @@ import java.util.List;
 import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;
 import br.com.uern.les.sosmovel.R;
+import br.com.uern.les.sosmovel.controladores.Mascara;
 import br.com.uern.les.sosmovel.controladores.ToastManager;
 import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
 
@@ -53,18 +54,22 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
 
         nomeUsuario = (EditText)findViewById(R.id.editTextNomeUsuario);
         numeroUsuario = (EditText)findViewById(R.id.editTextNumeroUsuario);
+        numeroUsuario.addTextChangedListener(Mascara.insert("(##)####-####", numeroUsuario));
         doencasUsuario = (EditText)findViewById(R.id.editTextDoencasUsuario);
 
         nomeFamiliar1 = (EditText)findViewById(R.id.editTextNomeFamiliar1);
         numeroFamiliar1 = (EditText)findViewById(R.id.editTextNumeroFamiliar1);
+        numeroFamiliar1.addTextChangedListener(Mascara.insert("(##)####-####", numeroFamiliar1));
         parentescoFamiliar1 = (EditText)findViewById(R.id.editTextParentescoFamiliar1);
 
         nomeFamiliar2 = (EditText)findViewById(R.id.editTextNomeFamiliar2);
         numeroFamiliar2 = (EditText)findViewById(R.id.editTextNumeroFamiliar2);
+        numeroFamiliar2.addTextChangedListener(Mascara.insert("(##)####-####", numeroFamiliar2));
         parentescoFamiliar2 = (EditText)findViewById(R.id.editTextParentescoFamiliar2);
 
         nomeFamiliar3 = (EditText)findViewById(R.id.editTextNomeFamiliar3);
         numeroFamiliar3 = (EditText)findViewById(R.id.editTextNumeroFamiliar3);
+        numeroFamiliar3.addTextChangedListener(Mascara.insert("(##)####-####", numeroFamiliar3));
         parentescoFamiliar3 = (EditText)findViewById(R.id.editTextParentescoFamiliar3);
 
         btCadastro = (Button)findViewById(R.id.buttonCadastro);
@@ -106,20 +111,20 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
 
                 List<String> listaCadastro = new ArrayList<String>();
 
-                listaCadastro.add(numeroUsuario.getText().toString());
+                listaCadastro.add(Mascara.unmask(numeroUsuario.getText().toString()));
                 listaCadastro.add(nomeUsuario.getText().toString());
                 listaCadastro.add(doencasUsuario.getText().toString());
 
                 listaCadastro.add(nomeFamiliar1.getText().toString());
-                listaCadastro.add(numeroFamiliar1.getText().toString());
+                listaCadastro.add(Mascara.unmask(numeroFamiliar1.getText().toString()));
                 listaCadastro.add(parentescoFamiliar1.getText().toString());
 
                 listaCadastro.add(nomeFamiliar2.getText().toString());
-                listaCadastro.add(numeroFamiliar2.getText().toString());
+                listaCadastro.add(Mascara.unmask(numeroFamiliar2.getText().toString()));
                 listaCadastro.add(parentescoFamiliar2.getText().toString());
 
                 listaCadastro.add(nomeFamiliar3.getText().toString());
-                listaCadastro.add(numeroFamiliar3.getText().toString());
+                listaCadastro.add(Mascara.unmask(numeroFamiliar3.getText().toString()));
                 listaCadastro.add(parentescoFamiliar3.getText().toString());
 
                 //Realizar cadastro
