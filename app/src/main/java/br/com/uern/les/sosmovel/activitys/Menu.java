@@ -2,15 +2,20 @@ package br.com.uern.les.sosmovel.activitys;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,11 +25,12 @@ import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controladores.SMS;
+import br.com.uern.les.sosmovel.controladores.Servico;
 import br.com.uern.les.sosmovel.controladores.ToastManager;
 import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;
 
-public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener{
+public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener, LocationListener {
 
     private Button btMensagem1,btMensagem2, btMensagem3, btOk1, btOk2;
     private DBAdapter banco;
@@ -34,12 +40,27 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
     private ArrayList<String> listaNumeros = new ArrayList<String>();
     private String chave = "";
     private AlertDialog alerta;
+    public Context context;
+    private LocationManager locationManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_menu);
         actionBarSetup();
+
+        context = getApplicationContext();
+        locationManager = (LocationManager) this.getApplicationContext().getSystemService(LOCATION_SERVICE);
+        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            Log.i("Dentro do", "IF");
+            ToastManager.show(this, "O App S.O.S precisa acessar seu local. Ative o acesso à localização.", ToastManager.INFORMACOES);
+            startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
+
+        }else{
+            Intent intent = new Intent(this, Servico.class);
+            startService(intent);
+        }
 
         chave = this.getIntent().getStringExtra("chave");
 
@@ -104,6 +125,25 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         btSocorro.setOnClickListener(this);
 
     }
+
+    @Override
+    public void onResume(){
+
+        context = getApplicationContext();
+        locationManager = (LocationManager) this.getApplicationContext().getSystemService(LOCATION_SERVICE);
+        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            Log.i("Dentro do", "IF");
+            ToastManager.show(this, "O App S.O.S precisa acessar seu local. Ative o acesso à localização.", ToastManager.INFORMACOES);
+            startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
+
+        }else{
+            Intent intent = new Intent(this, Servico.class);
+            startService(intent);
+        }
+        super.onResume();
+
+    }
+
 
     public void alertaDialogo(int layout, int idButton){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -235,5 +275,25 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         if(which == -1){
             alerta.dismiss();
         }
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
     }
 }

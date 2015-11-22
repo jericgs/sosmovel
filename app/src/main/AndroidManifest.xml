@@ -57,18 +57,9 @@
             android:screenOrientation="portrait">
         </activity>
 
-        <service android:name=".controladores.Servico">
-            <intent-filter>
-                <action android:name="INICIAR_SERVICO" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-
-        <service android:name=".controladores.ServicoComConexao">
-            <intent-filter>
-                <action android:name="INICIAR_SERVICO" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+        <service
+            android:name=".controladores.Servico"
+            android:exported="false">
         </service>
 
     </application>

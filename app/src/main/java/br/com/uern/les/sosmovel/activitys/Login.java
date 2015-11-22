@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controladores.Mascara;
+import br.com.uern.les.sosmovel.controladores.Servico;
 import br.com.uern.les.sosmovel.controladores.ToastManager;
 import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;

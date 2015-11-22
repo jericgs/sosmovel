@@ -84,7 +84,6 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle(s);
 
-
         }
     }
 
