@@ -19,15 +19,16 @@ public class Servico extends Service implements Runnable, LocationListener {
     public static final String CATEGORIA = "servico";
     private boolean estado;
     private int cont = 0;
-    public Context context;
     private LocationManager locationManager;
+    private double latitude;
+    private double longitude;
 
     @Override
     public void onCreate(){
         super.onCreate();
 
-        context = getApplicationContext();
-        locationManager = (LocationManager) this.getApplicationContext().getSystemService(LOCATION_SERVICE);
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, this);
 
         estado = true;
         new Thread(this).start();
@@ -57,7 +58,7 @@ public class Servico extends Service implements Runnable, LocationListener {
         while (estado){
 
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
                 cont++;
                 Log.i(CATEGORIA, "rodando.....: " + cont);
             } catch (InterruptedException e) {
@@ -69,6 +70,11 @@ public class Servico extends Service implements Runnable, LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
+
+        latitude = location.getLatitude();
+        longitude = location.getLongitude();
+
+        Log.d("Informação", "Latitude: " + latitude + "\n Longitude: " + longitude);
 
     }
 

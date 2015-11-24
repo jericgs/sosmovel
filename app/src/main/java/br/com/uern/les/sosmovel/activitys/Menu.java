@@ -32,7 +32,7 @@ import br.com.uern.les.sosmovel.controladores.DBAdapter;
 
 public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener, LocationListener {
 
-    private Button btMensagem1,btMensagem2, btMensagem3, btOk1, btOk2;
+    private Button btMensagem1,btMensagem2, btMensagem3;
     private DBAdapter banco;
     private long resistroMensagem;
     private String retornoSMS;
