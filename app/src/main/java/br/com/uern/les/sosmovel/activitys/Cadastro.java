@@ -37,6 +37,7 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
     private EditText nomeFamiliar3, numeroFamiliar3, parentescoFamiliar3;
     private Button btCadastro;
 
+
     private long resistrosUsuarios,resistrosFamiliares;
     private String respostaRetornadaUsuario = null, respostaRetornadaFamiliar1 = null, respostaRetornadaFamiliar2 = null, respostaRetornadaFamiliar3 = null;
 
