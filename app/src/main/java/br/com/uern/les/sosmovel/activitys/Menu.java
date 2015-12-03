@@ -1,6 +1,5 @@
 package br.com.uern.les.sosmovel.activitys;
 
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,25 +9,23 @@ import android.graphics.Typeface;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+
 import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
+import br.com.uern.les.sosmovel.controladores.DBAdapter;
 import br.com.uern.les.sosmovel.controladores.SMS;
 import br.com.uern.les.sosmovel.controladores.Servico;
 import br.com.uern.les.sosmovel.controladores.ToastManager;
-import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
-import br.com.uern.les.sosmovel.controladores.DBAdapter;
 
 public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener, LocationListener {
 
@@ -48,7 +45,10 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_menu);
-        actionBarSetup();
+        //actionBarSetup();
+
+        //Tela sempre ativa
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         context = getApplicationContext();
         locationManager = (LocationManager) this.getApplicationContext().getSystemService(LOCATION_SERVICE);
@@ -184,7 +184,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         return super.onOptionsItemSelected(item);
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             SpannableString s = new SpannableString("  S.O.S - Móvel");
@@ -194,7 +194,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
 
 
         }
-    }
+    }*/
 
     @Override
     public void onClick(View v) {

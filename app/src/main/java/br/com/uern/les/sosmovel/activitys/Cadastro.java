@@ -1,15 +1,12 @@
 package br.com.uern.les.sosmovel.activitys;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -19,12 +16,11 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;
-import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controladores.Mascara;
 import br.com.uern.les.sosmovel.controladores.ToastManager;
-import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
 
 /**
  * Created by Erick on 17/07/2015.
@@ -37,7 +33,6 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
     private EditText nomeFamiliar3, numeroFamiliar3, parentescoFamiliar3;
     private Button btCadastro;
 
-
     private long resistrosUsuarios,resistrosFamiliares;
     private String respostaRetornadaUsuario = null, respostaRetornadaFamiliar1 = null, respostaRetornadaFamiliar2 = null, respostaRetornadaFamiliar3 = null;
 
@@ -46,7 +41,10 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_cadastro);
 
-        actionBarSetup();
+        //Tela sempre ativa
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        //actionBarSetup();
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -77,7 +75,7 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
         btCadastro.setOnClickListener(this);
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             SpannableString s = new SpannableString("  S.O.S - Móvel");
@@ -86,7 +84,7 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
             ab.setTitle(s);
 
         }
-    }
+    }*/
 
     @Override
     public void onBackPressed() {
@@ -167,19 +165,19 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
                     String respostaFamiliar3 = respostaRetornadaFamiliar3.toString();
 
                     Log.i("Informação Usuario 1: ", respostaUsuario);
-                    Log.i("Informação Familiar1 1: ", respostaFamiliar1);
-                    Log.i("Informação Familiar2 1: ", respostaFamiliar2);
-                    Log.i("Informação Familiar3 1: ", respostaFamiliar3);
+                    Log.i("Info Familiar1 1: ", respostaFamiliar1);
+                    Log.i("Info Familiar2 1: ", respostaFamiliar2);
+                    Log.i("Info Familiar3 1: ", respostaFamiliar3);
 
                     respostaUsuario = respostaUsuario.replaceAll("\\s+", "");
                     respostaFamiliar1 = respostaFamiliar1.replaceAll("\\s+", "");
                     respostaFamiliar2 = respostaFamiliar2.replaceAll("\\s+", "");
                     respostaFamiliar3 = respostaFamiliar3.replaceAll("\\s+", "");
 
-                    Log.i("Informação Usuario 2: ", respostaUsuario);
-                    Log.i("Informação Familiar1 2: ", respostaFamiliar1);
-                    Log.i("Informação Familiar2 2: ", respostaFamiliar2);
-                    Log.i("Informação Familiar3 2: ", respostaFamiliar3);
+                    Log.i("Info Usuario 2: ", respostaUsuario);
+                    Log.i("Info Familiar1 2: ", respostaFamiliar1);
+                    Log.i("Info Familiar2 2: ", respostaFamiliar2);
+                    Log.i("Info Familiar3 2: ", respostaFamiliar3);
 
                     DBAdapter db = new DBAdapter(this);
                     db.abrir();

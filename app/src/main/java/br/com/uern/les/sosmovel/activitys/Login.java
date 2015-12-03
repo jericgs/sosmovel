@@ -7,18 +7,20 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+
 import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
-import br.com.uern.les.sosmovel.controladores.Mascara;
-import br.com.uern.les.sosmovel.controladores.Servico;
-import br.com.uern.les.sosmovel.controladores.ToastManager;
 import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;
+import br.com.uern.les.sosmovel.controladores.Mascara;
+import br.com.uern.les.sosmovel.controladores.ToastManager;
 
 /**
  * Created by Erick on 23/07/2015.
@@ -35,6 +37,9 @@ public class Login extends Activity implements View.OnClickListener{
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_login);
+
+        //Tela sempre ativa
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

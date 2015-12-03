@@ -1,6 +1,5 @@
 package br.com.uern.les.sosmovel.activitys;
 
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -11,13 +10,12 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.util.Log;
+import android.view.WindowManager;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -35,11 +33,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.uern.les.sosmovel.R;
-import br.com.uern.les.sosmovel.controladores.ToastManager;
-import br.com.uern.les.sosmovel.controladores.TypefaceSpan;
 import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controladores.DBAdapter;
 import br.com.uern.les.sosmovel.controladores.InformacaoDeTempo;
+import br.com.uern.les.sosmovel.controladores.ToastManager;
 
 public class Solicitacao extends ActionBarActivity implements LocationListener{
 
@@ -62,7 +59,10 @@ public class Solicitacao extends ActionBarActivity implements LocationListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_gps);
 
-        actionBarSetup();
+        //Tela sempre ativa
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        //actionBarSetup();
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -97,7 +97,7 @@ public class Solicitacao extends ActionBarActivity implements LocationListener{
 
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             SpannableString s = new SpannableString("  S.O.S - Móvel");
@@ -105,7 +105,7 @@ public class Solicitacao extends ActionBarActivity implements LocationListener{
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle(s);
         }
-    }
+    }*/
 
     @Override
     public void onResume(){
