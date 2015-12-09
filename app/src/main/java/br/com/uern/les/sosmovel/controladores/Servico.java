@@ -21,7 +21,7 @@ public class Servico extends IntentService implements LocationListener, SensorEv
 
     // valor usado como limite de aceleração/impacto para detectar acidentes. Valores acima disto
     // irão disparar o alerta de acidente
-    public final static float ACELERAÇÃO_LIMITE = 5.0f;
+    public final static float ACELERAÇÃO_LIMITE = 6.0f;
 
     // objeto que gerencia o acesso aos dados do GPS
     private LocationManager locationManager;
