@@ -1,8 +1,6 @@
 package br.com.uern.les.sosmovel.controllers;
 
-/**
- * Created by cramo on 18/11/2015.
- */import android.text.Editable;
+import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 

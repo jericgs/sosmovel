@@ -282,6 +282,7 @@ public class Solicitacao extends ActionBarActivity implements LocationListener{
             this.PontoListener = PontoListener;
         }
 
+
         @Override
         public void deactivate() {
 

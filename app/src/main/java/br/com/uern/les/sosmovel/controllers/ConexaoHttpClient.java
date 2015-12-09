@@ -17,10 +17,6 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.ArrayList;
 
-/**
- * Created by Erick on 15/01/2015.
- */
-
 public class ConexaoHttpClient {
     public static final int HTTP_TIMEOUT = 30 * 1000;
     private static HttpClient httpclient;

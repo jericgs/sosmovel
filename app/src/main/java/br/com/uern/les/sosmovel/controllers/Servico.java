@@ -32,7 +32,7 @@ public class Servico extends IntentService implements LocationListener, SensorEv
     // objeto que gerencia o acesso aos sensores
     private SensorManager mSensorManager;
     // objetos que gerenciam o acesso aos dados de sensores específicos
-    private Sensor acelerometro, magnometro, aceleraçãoLinear;
+    private Sensor acelerometro, magnetometro, aceleracaoLinear;
 
     /**
      * Construtor da classe.
@@ -80,9 +80,9 @@ public class Servico extends IntentService implements LocationListener, SensorEv
         // verifncando se o magnetômetro está presente
         if (mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null) {
             // obtendo acesso ao magnetômetro
-            magnometro = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+            magnetometro = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
             // registrando a classe como listener das atualizações do magnetômetro
-            mSensorManager.registerListener(this, magnometro, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, magnetometro, SensorManager.SENSOR_DELAY_NORMAL);
             Log.d("Magnetômetro", "Magnetômetro presente.");
         } else {
             // Sorry, there are no magnetometers on your device.
@@ -91,9 +91,9 @@ public class Servico extends IntentService implements LocationListener, SensorEv
         // verificando se há sensor de aceleração linear (acelerômetro MENOS gravidade) presente
         if (mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION) != null) {
             // obtendo acesso ao sensor
-            aceleraçãoLinear = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+            aceleracaoLinear = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
             // registrando a classe como listener das atualizações
-            mSensorManager.registerListener(this, aceleraçãoLinear, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, aceleracaoLinear, SensorManager.SENSOR_DELAY_NORMAL);
             Log.d("Aceleração linear", "Aceleração linear presente.");
         } else {
             // Sorry, there are no linear accelerometers on your device.
@@ -209,7 +209,7 @@ public class Servico extends IntentService implements LocationListener, SensorEv
      */
     private void checarStatus() {
         // só posso prosseguir na avaliação se eu já possuir dados de todos os sensores
-        if (linearAcceleration == null || magnometro == null || mGeomagnetic == null) {
+        if (linearAcceleration == null || magnetometro == null || mGeomagnetic == null) {
             return;
         }
         // verificando a aceleração linear. Valores maiores que 5ms
