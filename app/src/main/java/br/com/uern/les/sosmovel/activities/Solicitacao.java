@@ -33,10 +33,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.uern.les.sosmovel.R;
-import br.com.uern.les.sosmovel.controladores.ConexaoHttpClient;
-import br.com.uern.les.sosmovel.controladores.DBAdapter;
-import br.com.uern.les.sosmovel.controladores.InformacaoDeTempo;
-import br.com.uern.les.sosmovel.controladores.ToastManager;
+import br.com.uern.les.sosmovel.controllers.ConexaoHttpClient;
+import br.com.uern.les.sosmovel.controllers.DBAdapter;
+import br.com.uern.les.sosmovel.controllers.InformacaoDeTempo;
+import br.com.uern.les.sosmovel.controllers.ToastManager;
 
 public class Solicitacao extends ActionBarActivity implements LocationListener{
 

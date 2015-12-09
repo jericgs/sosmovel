@@ -1,4 +1,4 @@
-package br.com.uern.les.sosmovel.controladores;
+package br.com.uern.les.sosmovel.controllers;
 
 /**
  * Created by cramo on 18/11/2015.

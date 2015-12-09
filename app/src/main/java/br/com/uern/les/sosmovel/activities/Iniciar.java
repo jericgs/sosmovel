@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-import br.com.uern.les.sosmovel.controladores.DBAdapter;
+import br.com.uern.les.sosmovel.controllers.DBAdapter;
 
 /**
  * Created by Erick on 22/07/2015.

@@ -58,7 +58,7 @@
         </activity>
 
         <service
-            android:name=".controladores.Servico"
+            android:name=".controllers.Servico"
             android:exported="false">
         </service>
 

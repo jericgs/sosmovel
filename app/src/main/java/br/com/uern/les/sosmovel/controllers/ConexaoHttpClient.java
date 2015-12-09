@@ -1,6 +1,5 @@
-package br.com.uern.les.sosmovel.controladores;
+package br.com.uern.les.sosmovel.controllers;
 
-import android.util.Log;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;

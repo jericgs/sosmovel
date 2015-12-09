@@ -22,10 +22,10 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
-import br.com.uern.les.sosmovel.controladores.DBAdapter;
-import br.com.uern.les.sosmovel.controladores.SMS;
-import br.com.uern.les.sosmovel.controladores.Servico;
-import br.com.uern.les.sosmovel.controladores.ToastManager;
+import br.com.uern.les.sosmovel.controllers.DBAdapter;
+import br.com.uern.les.sosmovel.controllers.SMS;
+import br.com.uern.les.sosmovel.controllers.Servico;
+import br.com.uern.les.sosmovel.controllers.ToastManager;
 
 public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener, LocationListener {
 

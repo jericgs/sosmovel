@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import br.com.uern.les.sosmovel.R;
-import br.com.uern.les.sosmovel.controladores.DBAdapter;
-import br.com.uern.les.sosmovel.controladores.ToastManager;
+import br.com.uern.les.sosmovel.controllers.DBAdapter;
+import br.com.uern.les.sosmovel.controllers.ToastManager;
 
 
 public class Edicao extends ActionBarActivity implements View.OnClickListener {

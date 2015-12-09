@@ -1,4 +1,4 @@
-package br.com.uern.les.sosmovel.controladores;
+package br.com.uern.les.sosmovel.controllers;
 
 import android.content.Context;
 import android.graphics.Paint;
