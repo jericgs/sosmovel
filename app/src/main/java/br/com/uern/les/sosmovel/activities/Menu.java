@@ -65,9 +65,9 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         chave = this.getIntent().getStringExtra("chave");
 
         if(chave.toString().equalsIgnoreCase("alertaSucesso")){
-            int leyout = R.layout.tela_alerta_confirmado;
+            int laayout = R.layout.tela_alerta_confirmado;
             int idButton = R.id.buttonOk1;
-            alertaDialogo(leyout, idButton);
+            alertaDialogo(laayout, idButton);
         }
 
         if(chave.toString().equalsIgnoreCase("alertaNaoEnviado")){
