@@ -43,6 +43,7 @@ public class Servico extends IntentService implements LocationListener, SensorEv
         super(name);
     }
 
+    
     /**
      * Construtor da classe.
      */
