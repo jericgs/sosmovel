@@ -1,4 +1,4 @@
-package br.com.uern.les.sosmovel.activitys;
+package br.com.uern.les.sosmovel.activities;
 
 import android.app.Activity;
 import android.content.Intent;

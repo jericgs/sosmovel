@@ -109,7 +109,7 @@ public class Servico extends IntentService implements LocationListener, SensorEv
 
     @Override
     public void onDestroy(){
-        Toast.makeText(this, "Serviço destruido...", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Serviço destruido.", Toast.LENGTH_LONG).show();
     }
 
     @Override
