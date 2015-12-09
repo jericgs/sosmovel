@@ -101,7 +101,6 @@ public class Servico extends IntentService implements LocationListener, SensorEv
         }
     }
 
-
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Toast.makeText(this, "Rodando em segundo plano...", Toast.LENGTH_SHORT).show();
