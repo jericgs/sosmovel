@@ -44,7 +44,7 @@ public class Solicitacao extends ActionBarActivity implements LocationListener{
     private GoogleMap map;
     private LocationManager locationManager;
     private boolean permitirNetwork;
-    private int camPosicion = 0;
+    private int camPosition = 0;
     private List<String> geoLocalizacao = new ArrayList<>();
     private AlertDialog alerta;
     private String chave;
@@ -139,9 +139,9 @@ public class Solicitacao extends ActionBarActivity implements LocationListener{
         Log.i("Informação", "Passou...1");
 
         map.setMyLocationEnabled(true);
-        if(camPosicion <= 1){
+        if(camPosition <= 1){
             map.moveCamera(update);
-            camPosicion++;
+            camPosition++;
         }
 
         MinhaLocalizacao minhaLocalizacao = new MinhaLocalizacao();

@@ -71,9 +71,9 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         }
 
         if(chave.toString().equalsIgnoreCase("alertaNaoEnviado")){
-            int leyout = R.layout.tela_alerta_nao_confirmado;
+            int laayout = R.layout.tela_alerta_nao_confirmado;
             int idButton = R.id.buttonOk2;
-            alertaDialogo(leyout, idButton);
+            alertaDialogo(laayout, idButton);
         }
 
         banco = new DBAdapter(this);
@@ -278,7 +278,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
     }
 
     @Override
-    public void onLocationChanged(Location location) {
+    public void     onLocationChanged(Location location) {
 
     }
 
