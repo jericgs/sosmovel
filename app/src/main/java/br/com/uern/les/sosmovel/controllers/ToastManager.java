@@ -11,9 +11,6 @@ import android.widget.Toast;
 
 import br.com.uern.les.sosmovel.R;
 
-/**
- * Created by Erick on 14/01/2015.
- */
 public class ToastManager {
 
     public static final int INFORMACOES = 0;

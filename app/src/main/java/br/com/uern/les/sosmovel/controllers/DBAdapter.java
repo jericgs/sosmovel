@@ -63,6 +63,7 @@ public class DBAdapter {
     private static class DatabaseHelper extends SQLiteOpenHelper{
 
         DatabaseHelper(Context context){
+
             super(context, DATABASE_NOME, null, DATA_VERSION);
         }
 

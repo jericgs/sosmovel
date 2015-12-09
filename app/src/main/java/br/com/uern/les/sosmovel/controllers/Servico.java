@@ -43,7 +43,7 @@ public class Servico extends IntentService implements LocationListener, SensorEv
         super(name);
     }
 
-    
+
     /**
      * Construtor da classe.
      */
@@ -57,12 +57,12 @@ public class Servico extends IntentService implements LocationListener, SensorEv
      */
     @Override
     public void onCreate() {
-        // chamando o construtor da superclasse (necessário, por padrão)
-        super.onCreate();
-        // obtendo uma instância do gerenciador do GPS
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        // solicitando ao regenciador que esta classe obtenha atualizações constantes do GPS
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, this);
+            // chamando o construtor da superclasse (necessário, por padrão)
+            super.onCreate();
+            // obtendo uma instância do gerenciador do GPS
+            locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+            // solicitando ao regenciador que esta classe obtenha atualizações constantes do GPS
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, this);
 
         // obtendo acesso ao gerenciador dos sensores
         mSensorManager = (SensorManager) getSystemService(this.SENSOR_SERVICE);

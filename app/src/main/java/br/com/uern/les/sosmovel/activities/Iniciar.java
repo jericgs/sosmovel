@@ -8,10 +8,6 @@ import android.view.WindowManager;
 
 import br.com.uern.les.sosmovel.controllers.DBAdapter;
 
-/**
- * Created by Erick on 22/07/2015.
- */
-
 public class Iniciar extends Activity {
 
     @Override
