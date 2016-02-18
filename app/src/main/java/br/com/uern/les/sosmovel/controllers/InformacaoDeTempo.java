@@ -6,6 +6,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * Created by Erick on 25/03/2015.
+ */
 public class InformacaoDeTempo {
 
     public String getDateTime() {

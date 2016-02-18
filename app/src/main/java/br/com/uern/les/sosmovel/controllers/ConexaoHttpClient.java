@@ -1,5 +1,6 @@
 package br.com.uern.les.sosmovel.controllers;
 
+import android.util.Log;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -16,6 +17,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.ArrayList;
+
+/**
+ * Created by Erick on 15/01/2015.
+ */
 
 public class ConexaoHttpClient {
     public static final int HTTP_TIMEOUT = 30 * 1000;

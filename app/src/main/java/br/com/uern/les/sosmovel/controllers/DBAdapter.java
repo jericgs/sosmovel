@@ -8,6 +8,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+/**
+ * Created by Erick on 17/07/2015.
+ */
+
 public class DBAdapter {
 
     //Tabela Usuarios
@@ -63,7 +67,6 @@ public class DBAdapter {
     private static class DatabaseHelper extends SQLiteOpenHelper{
 
         DatabaseHelper(Context context){
-
             super(context, DATABASE_NOME, null, DATA_VERSION);
         }
 

@@ -1,18 +1,25 @@
 package br.com.uern.les.sosmovel.activities;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controllers.DBAdapter;
+import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controllers.ToastManager;
+import br.com.uern.les.sosmovel.controllers.TypefaceSpan;
 
 
+/**
+ * Created by Erick on 26/07/2015.
+ */
 public class Edicao extends ActionBarActivity implements View.OnClickListener {
 
     private EditText editText_mensagem1, editText_mensagem2, editText_mensagem3;
@@ -23,10 +30,7 @@ public class Edicao extends ActionBarActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_edicao_mensagens);
-        //actionBarSetup();
-
-        //Tela sempre ativa
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        actionBarSetup();
 
         banco = new DBAdapter(this);
 
@@ -41,7 +45,7 @@ public class Edicao extends ActionBarActivity implements View.OnClickListener {
 
     }
 
-    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             SpannableString s = new SpannableString("  S.O.S - Móvel");
@@ -49,7 +53,7 @@ public class Edicao extends ActionBarActivity implements View.OnClickListener {
             android.support.v7.app.ActionBar ab = getSupportActionBar();
             ab.setTitle(s);
         }
-    }*/
+    }
 
     @Override
     public void onBackPressed() {

@@ -1,5 +1,6 @@
 package br.com.uern.les.sosmovel.activities;
 
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,23 +10,25 @@ import android.graphics.Typeface;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Bundle;
+import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-
 import java.util.ArrayList;
 
 import br.com.uern.les.sosmovel.R;
-import br.com.uern.les.sosmovel.controllers.DBAdapter;
 import br.com.uern.les.sosmovel.controllers.SMS;
 import br.com.uern.les.sosmovel.controllers.Servico;
 import br.com.uern.les.sosmovel.controllers.ToastManager;
+import br.com.uern.les.sosmovel.controllers.TypefaceSpan;
+import br.com.uern.les.sosmovel.controllers.DBAdapter;
 
 public class Menu extends ActionBarActivity implements View.OnClickListener, DialogInterface.OnClickListener, LocationListener {
 
@@ -45,10 +48,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_menu);
-        //actionBarSetup();
-
-        //Tela sempre ativa
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        actionBarSetup();
 
         context = getApplicationContext();
         locationManager = (LocationManager) this.getApplicationContext().getSystemService(LOCATION_SERVICE);
@@ -65,15 +65,15 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         chave = this.getIntent().getStringExtra("chave");
 
         if(chave.toString().equalsIgnoreCase("alertaSucesso")){
-            int laayout = R.layout.tela_alerta_confirmado;
+            int leyout = R.layout.tela_alerta_confirmado;
             int idButton = R.id.buttonOk1;
-            alertaDialogo(laayout, idButton);
+            alertaDialogo(leyout, idButton);
         }
 
         if(chave.toString().equalsIgnoreCase("alertaNaoEnviado")){
-            int laayout = R.layout.tela_alerta_nao_confirmado;
+            int leyout = R.layout.tela_alerta_nao_confirmado;
             int idButton = R.id.buttonOk2;
-            alertaDialogo(laayout, idButton);
+            alertaDialogo(leyout, idButton);
         }
 
         banco = new DBAdapter(this);
@@ -184,7 +184,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
         return super.onOptionsItemSelected(item);
     }
 
-    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             SpannableString s = new SpannableString("  S.O.S - Móvel");
@@ -194,7 +194,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
 
 
         }
-    }*/
+    }
 
     @Override
     public void onClick(View v) {
@@ -278,7 +278,7 @@ public class Menu extends ActionBarActivity implements View.OnClickListener, Dia
     }
 
     @Override
-    public void     onLocationChanged(Location location) {
+    public void onLocationChanged(Location location) {
 
     }
 

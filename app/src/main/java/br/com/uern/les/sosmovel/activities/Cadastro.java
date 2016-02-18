@@ -1,12 +1,15 @@
 package br.com.uern.les.sosmovel.activities;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -16,11 +19,12 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controllers.ConexaoHttpClient;
 import br.com.uern.les.sosmovel.controllers.DBAdapter;
+import br.com.uern.les.sosmovel.R;
 import br.com.uern.les.sosmovel.controllers.Mascara;
 import br.com.uern.les.sosmovel.controllers.ToastManager;
+import br.com.uern.les.sosmovel.controllers.TypefaceSpan;
 
 /**
  * Created by Erick on 17/07/2015.
@@ -41,10 +45,7 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tela_cadastro);
 
-        //Tela sempre ativa
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-        //actionBarSetup();
+        actionBarSetup();
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -75,7 +76,7 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
         btCadastro.setOnClickListener(this);
     }
 
-    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void actionBarSetup() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             SpannableString s = new SpannableString("  S.O.S - Móvel");
@@ -84,7 +85,7 @@ public class Cadastro extends ActionBarActivity implements View.OnClickListener{
             ab.setTitle(s);
 
         }
-    }*/
+    }
 
     @Override
     public void onBackPressed() {
